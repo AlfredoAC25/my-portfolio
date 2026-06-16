@@ -1,11 +1,26 @@
-<script setup></script>
+<script setup>
+import NavBar from './components/NavBar.vue'
+import HeroSection from './components/HeroSection.vue'
+import ExperienceSection from './components/ExperienceSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import SkillsSection from './components/SkillsSection.vue'
+import EducationSection from './components/EducationSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import FooterSection from './components/FooterSection.vue'
+import { useScrollReveal } from './composables/useScrollReveal'
+
+useScrollReveal()
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <NavBar />
+  <main>
+    <HeroSection />
+    <ExperienceSection />
+    <ProjectsSection />
+    <SkillsSection />
+    <EducationSection />
+    <ContactSection />
+  </main>
+  <FooterSection />
 </template>
-
-<style scoped></style>
