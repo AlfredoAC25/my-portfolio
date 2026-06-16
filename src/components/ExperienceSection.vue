@@ -10,7 +10,7 @@ const jobs = [
       'Implementé servidores de correo en Debian 12 con Postfix y Dovecot para envío masivo y monitoreo.',
       'Administré servidores Linux: firewalls, respaldos, detección de malware y mitigación básica de DDoS.',
     ],
-    tags: ['Laravel', 'MySQL', 'Debian', 'Postfix'],
+    tags: ['Laravel', 'MariaDB', 'PostgreSQL','Debian', 'Postfix', 'MVC'],
   },
   {
     role: 'Desarrollador Backend Golang',
@@ -21,7 +21,7 @@ const jobs = [
       'Diseñé una base de datos en MongoDB para trazabilidad de facturas y auditoría de solicitudes.',
       'Refactoricé la lógica de un sistema POS en paquetes de Composer para una arquitectura orientada a servicios.',
     ],
-    tags: ['Golang', 'MongoDB', 'Microservicios'],
+    tags: ['Golang', 'MongoDB', 'Clean Architecture', 'Microservicios'],
   },
   {
     role: 'Desarrollador Android / WordPress',
