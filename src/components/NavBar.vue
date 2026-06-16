@@ -1,13 +1,17 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from '../composables/useI18n'
 
 const open = ref(false)
+const { locale, t, toggleLocale } = useI18n()
+
 const links = [
-  { id: 'experiencia', label: 'Experiencia' },
-  { id: 'proyectos', label: 'Proyectos' },
-  { id: 'habilidades', label: 'Habilidades' },
-  { id: 'educacion', label: 'Educación' },
+  { id: 'experiencia', key: 'experience' },
+  { id: 'proyectos', key: 'projects' },
+  { id: 'habilidades', key: 'skills' },
+  { id: 'educacion', key: 'education' },
 ]
+
 function close() { open.value = false }
 </script>
 
@@ -15,11 +19,32 @@ function close() { open.value = false }
   <header class="nav">
     <div class="container nav-inner">
       <a href="#inicio" class="logo" @click="close">~/alfredo</a>
+
       <nav class="nav-links" :class="{ open }">
-        <a v-for="link in links" :key="link.id" :href="`#${link.id}`" @click="close">{{ link.label }}</a>
-        <a href="#contacto" class="btn btn-primary nav-cta" @click="close">Contactar</a>
+        <a
+          v-for="link in links"
+          :key="link.id"
+          :href="`#${link.id}`"
+          @click="close"
+        >
+          {{ t.nav[link.key] }}
+        </a>
+
+        <a href="#contacto" class="btn btn-primary nav-cta" @click="close">
+          {{ t.nav.contact }}
+        </a>
+
+        <button class="lang-btn" @click="toggleLocale">
+          {{ locale === 'es' ? 'EN' : 'ES' }}
+        </button>
       </nav>
-      <button class="menu-btn" @click="open = !open" :aria-expanded="open" aria-label="Abrir menú">
+
+      <button
+        class="menu-btn"
+        @click="open = !open"
+        :aria-expanded="open"
+        :aria-label="t.nav.menu"
+      >
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -51,5 +76,19 @@ function close() { open.value = false }
   }
   .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .menu-btn { display: flex; }
+}
+.lang-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: var(--bg-elevated);
 }
 </style>

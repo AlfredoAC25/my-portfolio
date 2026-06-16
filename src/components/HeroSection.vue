@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 const script = [
   { type: 'cmd', text: 'whoami' },
@@ -44,20 +47,19 @@ onMounted(async () => {
   <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">// backend developer · celaya, méxico</p>
-        <h1>Alfredo Arámburo</h1>
+        <p class="eyebrow">{{ t.hero.eyebrow }}</p>
+        <h1>{{ t.hero.title }}</h1>
         <p class="hero-lead">
-          Construyo sistemas backend confiables: ERPs, CRMs, facturación electrónica y plataformas de
-          movilidad, con Laravel, Golang y Java.
+          {{ t.hero.lead }}
         </p>
         <div class="hero-actions">
-          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-          <a href="#contacto" class="btn btn-secondary">Contactar</a>
+          <a href="#proyectos" class="btn btn-primary">{{ t.hero.projects }}</a>
+          <a href="#contacto" class="btn btn-secondary">{{ t.hero.contact }}</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">años de experiencia</span></div>
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">stacks backend</span></div>
-          <div class="stat"><span class="stat-num">B1</span><span class="stat-label">inglés</span></div>
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">{{ t.hero.years  }}</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">{{ t.hero.backendStacks  }}</span></div>
+          <div class="stat"><span class="stat-num">B1</span><span class="stat-label">{{ t.hero.english }}</span></div>
         </div>
       </div>
 
