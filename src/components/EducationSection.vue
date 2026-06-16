@@ -1,21 +1,29 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <section id="educacion" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">// educación</p>
-        <h2>Formación</h2>
+        <p class="eyebrow">{{ t.education.eyebrow }}</p>
+        <h2>{{ t.education.title }}</h2>
       </div>
+
       <div class="education-grid">
         <div class="card reveal">
-          <span class="period">2020 — 2025</span>
-          <h3>Ingeniería en Sistemas Computacionales</h3>
-          <p class="company">Tecnológico Nacional de México, Campus Celaya</p>
-          <p class="location">Celaya, Guanajuato, México</p>
+          <span class="period">{{ t.education.degree.period }}</span>
+          <h3>{{ t.education.degree.title }}</h3>
+          <p class="company">{{ t.education.degree.school }}</p>
+          <p class="location">{{ t.education.degree.location }}</p>
         </div>
+
         <div class="card reveal">
-          <span class="period">idiomas</span>
-          <h3>Inglés</h3>
-          <p class="company">Nivel B1</p>
+          <span class="period">{{ t.education.language.period }}</span>
+          <h3>{{ t.education.language.title }}</h3>
+          <p class="company">{{ t.education.language.level }}</p>
         </div>
       </div>
     </div>

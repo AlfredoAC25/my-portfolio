@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 const copied = ref(false)
 const email = 'alfredo.aramburo240@gmail.com'
@@ -19,17 +22,17 @@ async function copyEmail() {
   <section id="contacto" class="section">
     <div class="container">
       <div class="contact-box card reveal">
-        <p class="eyebrow">// contacto</p>
-        <h2>¿Construimos algo juntos?</h2>
-        <p class="section-sub">Disponible para proyectos backend, integraciones y administración de servidores.</p>
+        <p class="eyebrow">{{ t.contact.eyebrow }}</p>
+        <h2>{{ t.contact.title }}</h2>
+        <p class="section-sub">{{ t.contact.sub }}</p>
         <div class="contact-rows">
           <button class="contact-row" @click="copyEmail">
             <span class="label">email</span>
             <span class="value">{{ email }}</span>
-            <span class="hint">{{ copied ? 'copiado ✓' : 'copiar' }}</span>
+            <span class="hint">{{ copied ? t.contact.copied : t.contact.copy }}</span>
           </button>
           <a class="contact-row" href="tel:+524613528839">
-            <span class="label">teléfono</span>
+            <span class="label">{{ t.contact.phone }}</span>
             <span class="value">461 352 8839</span>
           </a>
           <a class="contact-row" href="https://github.com/AlfredoAC25" target="_blank" rel="noopener">
@@ -37,7 +40,7 @@ async function copyEmail() {
             <span class="value">github.com/AlfredoAC25</span>
           </a>
           <div class="contact-row static">
-            <span class="label">ubicación</span>
+            <span class="label">{{ t.contact.location }}</span>
             <span class="value">Celaya, Guanajuato, México</span>
           </div>
         </div>

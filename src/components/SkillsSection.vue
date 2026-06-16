@@ -1,25 +1,36 @@
 <script setup>
-const groups = [
-  { category: 'Backend', items: ['Laravel', 'Golang', 'Java'] },
-  { category: 'Frontend', items: ['Vue.js'] },
-  { category: 'Bases de datos', items: ['PostgreSQL', 'MySQL', 'MariaDB', 'MongoDB'] },
-  { category: 'DevOps e infraestructura', items: ['Linux', 'Cloudflare', 'Git', 'GitHub Actions'] },
-  { category: 'Desarrollo móvil', items: ['Android (Java)', 'Flutter'] },
-]
+import { computed } from 'vue'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
+
+const groups = computed(() => t.value.skills?.items ?? [])
 </script>
 
 <template>
   <section id="habilidades" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">// habilidades</p>
-        <h2>Stack técnico</h2>
+        <p class="eyebrow">{{ t.skills?.eyebrow }}</p>
+        <h2>{{ t.skills?.title }}</h2>
       </div>
+
       <div class="skills-grid">
-        <div v-for="g in groups" :key="g.category" class="card skill-card reveal">
+        <div
+          v-for="g in groups"
+          :key="g.id"
+          class="card skill-card reveal is-visible"
+        >
           <h3>{{ g.category }}</h3>
+
           <div class="tag-row">
-            <span v-for="item in g.items" :key="item" class="chip">{{ item }}</span>
+            <span
+              v-for="item in g.items"
+              :key="item"
+              class="chip"
+            >
+              {{ item }}
+            </span>
           </div>
         </div>
       </div>

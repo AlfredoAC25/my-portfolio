@@ -1,47 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useI18n } from '../composables/useI18n'
 
-const projects = [
-  {
-    name: 'Sistema de registro y pagos — Academia Celaya FC',
-    period: '2026',
-    description: 'Plataforma de inscripciones y cobros automatizando procesos administrativos del equipo.',
-    tags: ['Laravel', 'MariaDB', 'Vue.js'],
-    link: 'https://github.com/AlfredoAC25',
-    images: [
-      '/img/proyectos/crm-1.png',
-      '/img/proyectos/crm-2.png',
-      '/img/proyectos/crm-3.png'
-    ]
-  },
-  {
-    name: 'CRM para gestión administrativa.',
-    period: '2025',
-    description: 'Sistema interno en Laravel para automatizar procesos operativos',
-    tags: ['Laravel', 'MariaDB', 'Bootstrap'],
-    link: 'https://github.com/AlfredoAC25',
-    images: [
-      '/img/proyectos/crm-1.png',
-      '/img/proyectos/crm-2.png',
-      '/img/proyectos/crm-3.png'
-    ]
-  },
-  {
-    name: 'Sistema de Asistencia y Control de Acceso',
-    period: '2025',
-    description: 'Sistema para gestionar la asistencia y el control de acceso de asistentes a eventos.',
-    tags: ['Laravel', 'MariaDB', 'Vue.js'],
-    link: 'https://github.com/AlfredoAC25',
-    images: [
-      '/img/proyectos/crm-1.png',
-      '/img/proyectos/crm-2.png',
-      '/img/proyectos/crm-3.png'
-    ]
-  },
-]
+const { t } = useI18n()
+
+const projects = computed(() => t.value.projects?.items ?? [])
 
 const selectedProject = ref(null)
 const currentImage = ref(0)
+
+watch(projects, () => {
+  selectedProject.value = null
+  currentImage.value = 0
+})
 
 const openModal = (project) => {
   selectedProject.value = project
@@ -53,11 +24,15 @@ const closeModal = () => {
 }
 
 const nextImage = () => {
+  if (!selectedProject.value?.images?.length) return
+
   currentImage.value =
     (currentImage.value + 1) % selectedProject.value.images.length
 }
 
 const prevImage = () => {
+  if (!selectedProject.value?.images?.length) return
+
   currentImage.value =
     (currentImage.value - 1 + selectedProject.value.images.length) %
     selectedProject.value.images.length
@@ -68,17 +43,14 @@ const prevImage = () => {
   <section id="proyectos" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">// proyectos</p>
-        <h2>Proyectos destacados</h2>
-        <!-- <p class="section-sub">
-          Ejemplos basados en sistemas reales que he construido.
-        </p> -->
+        <p class="eyebrow">{{ t.projects?.eyebrow }}</p>
+        <h2>{{ t.projects?.title }}</h2>
       </div>
 
       <div class="projects-grid">
         <article
           v-for="p in projects"
-          :key="p.name"
+          :key="p.id"
           class="card project-card reveal"
           tabindex="0"
           @click="openModal(p)"
@@ -89,23 +61,19 @@ const prevImage = () => {
           <p class="desc">{{ p.description }}</p>
 
           <div class="tag-row">
-            <span v-for="t in p.tags" :key="t" class="chip">{{ t }}</span>
+            <span v-for="tag in p.tags" :key="tag" class="chip">
+              {{ tag }}
+            </span>
           </div>
-
-          <!-- <a
-            :href="p.link"
-            target="_blank"
-            rel="noopener"
-            class="project-link"
-            @click.stop
-          >
-            Ver en GitHub →
-          </a> -->
         </article>
       </div>
     </div>
 
-    <div v-if="selectedProject" class="modal-overlay" @click.self="closeModal">
+    <div
+      v-if="selectedProject"
+      class="modal-overlay"
+      @click.self="closeModal"
+    >
       <div class="modal">
         <button class="modal-close" @click="closeModal">×</button>
 
@@ -117,7 +85,7 @@ const prevImage = () => {
 
           <img
             :src="selectedProject.images[currentImage]"
-            :alt="`${selectedProject.name} imagen ${currentImage + 1}`"
+            :alt="`${selectedProject.name} ${t.projects?.imageAlt} ${currentImage + 1}`"
             class="carousel-img"
           />
 
@@ -171,18 +139,6 @@ const prevImage = () => {
   margin-bottom: 18px;
 }
 
-.project-link {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-/* Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
