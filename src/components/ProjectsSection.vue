@@ -84,6 +84,7 @@ const prevImage = () => {
           <button class="carousel-btn" @click="prevImage">‹</button>
 
           <img
+            v-if="selectedProject.images?.length"
             :src="selectedProject.images[currentImage]"
             :alt="`${selectedProject.name} ${t.projects?.imageAlt} ${currentImage + 1}`"
             class="carousel-img"

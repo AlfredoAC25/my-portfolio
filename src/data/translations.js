@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       eyebrow: '// fullstack developer · celaya, méxico',
       title: 'Alfredo Arámburo',
-      lead: 'Construyo sistemas backend confiables: ERPs, CRMs, facturación electrónica y plataformas de movilidad, con Laravel, Golang y Java.',
+      lead: 'Construyo sistemas backend y frontend confiables: ERPs, CRMs, facturación electrónica y plataformas de movilidad, con Laravel, Golang y Java.',
       projects: 'Ver proyectos',
       contact: 'Contactar',
       years: 'años de experiencia',
@@ -45,11 +45,11 @@ export const translations = {
     experience: {
       eyebrow: '// experiencia',
       title: 'Historial profesional',
-      sub: 'Tres años construyendo software backend en producción, de sistemas ERP a microservicios de facturación.',
+      sub: 'Tres años construyendo software backend y frontend en producción, de sistemas CRM y ERP a microservicios de facturación.',
       jobs: [
         {
-          role: 'Desarrollador Backend Laravel',
-          company: 'Universidad ICEMéxico / Celaya FC',
+          role: 'Desarrollador Fullstack Laravel',
+          company: 'RED SMS PRO / Celaya FC',
           period: 'Abr 2025 — Presente',
           bullets: [
             'Desarrollé y mantuve sistemas CRM y ERP en Laravel usados por usuarios internos y externos, automatizando procesos operativos.',
@@ -99,9 +99,9 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Vue.js'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_1.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_2.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_3.png',
           ],
         },
         {
@@ -112,9 +112,9 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Bootstrap'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/crm/crm_1.png',
+            '/my-portfolio/img/projects/crm/crm_2.png',
+            '/my-portfolio/img/projects/crm/crm_3.png',
           ],
         },
         {
@@ -126,9 +126,9 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Vue.js'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/attendance/attendance_1.png',
+            '/my-portfolio/img/projects/attendance/attendance_2.png',
+            '/my-portfolio/img/projects/attendance/attendance_3.png',
           ],
         },
       ],
@@ -186,7 +186,7 @@ export const translations = {
     hero: {
       eyebrow: '// fullstack developer · celaya, mexico',
       title: 'Alfredo Arámburo',
-      lead: 'I build reliable backend systems: ERPs, CRMs, electronic invoicing platforms, and mobility systems using Laravel, Golang, and Java.',
+      lead: 'I build reliable backend and frontend systems: ERPs, CRMs, electronic invoicing platforms, and mobility systems using Laravel, Golang, and Java.',
       projects: 'View projects',
       contact: 'Contact',
       years: 'years of experience',
@@ -219,11 +219,11 @@ export const translations = {
     experience: {
       eyebrow: '// experience',
       title: 'Professional experience',
-      sub: 'Three years building production backend software, from ERP systems to electronic invoicing microservices.',
+      sub: 'Three years building production backend and frontend software, from CRM and ERP systems to electronic invoicing microservices.',
       jobs: [
         {
-          role: 'Laravel Backend Developer',
-          company: 'Universidad ICEMéxico / Celaya FC',
+          role: 'Fullstack Laravel Developer',
+          company: 'RED SMS PRO / Celaya FC',
           period: 'Apr 2025 — Present',
           bullets: [
             'Developed and maintained CRM and ERP systems in Laravel used by internal and external users, automating operational processes.',
@@ -273,9 +273,13 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Vue.js'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_1.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_2.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_3.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_4.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_5.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_6.png',
+            '/my-portfolio/img/projects/celayafc/erpfc_7.png',
           ],
         },
         {
@@ -286,9 +290,9 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Bootstrap'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/crm/crm_1.png',
+            '/my-portfolio/img/projects/crm/crm_2.png',
+            '/my-portfolio/img/projects/crm/crm_3.png',
           ],
         },
         {
@@ -299,9 +303,9 @@ export const translations = {
           tags: ['Laravel', 'MariaDB', 'Vue.js'],
           link: 'https://github.com/AlfredoAC25',
           images: [
-            '/img/proyectos/crm-1.png',
-            '/img/proyectos/crm-2.png',
-            '/img/proyectos/crm-3.png',
+            '/my-portfolio/img/projects/attendance/attendance_1.png',
+            '/my-portfolio/img/projects/attendance/attendance_2.png',
+            '/my-portfolio/img/projects/attendance/attendance_3.png',
           ],
         },
       ],
@@ -312,7 +316,7 @@ export const translations = {
       title: 'Technical stack',
       items: [
         { id: 'backend', category: 'Backend', items: ['Laravel', 'Golang', 'Java'] },
-        { id: 'frontend', category: 'Frontend', items: ['Vue.js'] },
+        { id: 'frontend', category: 'Frontend', items: ['Vue.js', 'Bootstrap'] },
         {
           id: 'databases',
           category: 'Databases',
