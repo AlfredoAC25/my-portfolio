@@ -150,6 +150,7 @@ const prevImage = () => {
   padding: 20px;
 }
 
+/*
 .modal {
   position: relative;
   width: min(900px, 100%);
@@ -157,6 +158,11 @@ const prevImage = () => {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 28px;
+}
+  */
+
+.modal {
+  width: min(1400px, 95vw);
 }
 
 .modal-close {
@@ -182,11 +188,17 @@ const prevImage = () => {
   gap: 16px;
 }
 
-.carousel-img {
+/*.carousel-img {
   width: 100%;
   max-height: 520px;
   object-fit: contain;
   border-radius: 14px;
+}*/
+
+.carousel-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: contain;
 }
 
 .carousel-btn {
