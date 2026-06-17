@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       eyebrow: '// fullstack developer · celaya, méxico',
       title: 'Alfredo Arámburo',
-      lead: 'Construyo sistemas backend y frontend confiables: ERPs, CRMs, facturación electrónica y plataformas de movilidad, con Laravel, Golang y Java.',
+      lead: 'Construyo sistemas backend y frontend confiables: CRMs, facturación electrónica y plataformas de movilidad, con Laravel, Golang y Java.',
       projects: 'Ver proyectos',
       contact: 'Contactar',
       years: 'años de experiencia',
@@ -27,7 +27,7 @@ export const translations = {
         { type: 'cmd', text: './experiencia.sh --resumen' },
         {
           type: 'out',
-          text: '3 años construyendo ERPs, CRMs, facturación electrónica y plataformas de movilidad.',
+          text: '3 años construyendo CRMs, facturación electrónica y plataformas de movilidad.',
         },
       ],
     },
@@ -45,14 +45,14 @@ export const translations = {
     experience: {
       eyebrow: '// experiencia',
       title: 'Historial profesional',
-      sub: 'Tres años construyendo software backend y frontend en producción, de sistemas CRM y ERP a microservicios de facturación.',
+      sub: 'Tres años construyendo software backend y frontend en producción, de sistemas CRM a microservicios de facturación.',
       jobs: [
         {
           role: 'Desarrollador Fullstack Laravel',
           company: 'RED SMS PRO / Celaya FC',
           period: 'Abr 2025 — Presente',
           bullets: [
-            'Desarrollé y mantuve sistemas CRM y ERP en Laravel usados por usuarios internos y externos, automatizando procesos operativos.',
+            'Desarrollé y mantuve sistemas CRM en Laravel usados por usuarios internos y externos, automatizando procesos operativos.',
             'Construí el sistema de registro y pagos de la Academia de Fútbol Celaya FC, reduciendo la carga administrativa.',
             'Implementé servidores de correo en Debian 12 con Postfix y Dovecot para envío masivo y monitoreo.',
             'Administré servidores Linux: firewalls, respaldos, detección de malware y mitigación básica de DDoS.',
@@ -199,7 +199,7 @@ export const translations = {
     hero: {
       eyebrow: '// fullstack developer · celaya, mexico',
       title: 'Alfredo Arámburo',
-      lead: 'I build reliable backend and frontend systems: ERPs, CRMs, electronic invoicing platforms, and mobility systems using Laravel, Golang, and Java.',
+      lead: 'I build reliable backend and frontend systems: CRMs, electronic invoicing platforms, and mobility systems using Laravel, Golang, and Java.',
       projects: 'View projects',
       contact: 'Contact',
       years: 'years of experience',
@@ -214,7 +214,7 @@ export const translations = {
         { type: 'cmd', text: './experience.sh --summary' },
         {
           type: 'out',
-          text: '3 years building ERPs, CRMs, electronic invoicing systems, and mobility platforms.',
+          text: '3 years building CRMs, electronic invoicing systems, and mobility platforms.',
         },
       ],
     },
@@ -232,14 +232,14 @@ export const translations = {
     experience: {
       eyebrow: '// experience',
       title: 'Professional experience',
-      sub: 'Three years building production backend and frontend software, from CRM and ERP systems to electronic invoicing microservices.',
+      sub: 'Three years building production backend and frontend software, from CRM systems to electronic invoicing microservices.',
       jobs: [
         {
           role: 'Fullstack Laravel Developer',
           company: 'RED SMS PRO / Celaya FC',
           period: 'Apr 2025 — Present',
           bullets: [
-            'Developed and maintained CRM and ERP systems in Laravel used by internal and external users, automating operational processes.',
+            'Developed and maintained CRM and systems in Laravel used by internal and external users, automating operational processes.',
             'Built the registration and payment system for the Celaya FC Football Academy, reducing administrative workload.',
             'Implemented mail servers on Debian 12 with Postfix and Dovecot for bulk email delivery and monitoring.',
             'Managed Linux servers, including firewalls, backups, malware detection, and basic DDoS mitigation.',
